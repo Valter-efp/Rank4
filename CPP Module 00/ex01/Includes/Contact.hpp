@@ -6,9 +6,12 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:12:16 by vafernan          #+#    #+#             */
-/*   Updated: 2025/03/31 18:45:39 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:15:13 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>
 #include <string>
@@ -30,3 +33,5 @@ class Contact
 		std::string getlast_name();
 		std::string getnickname();
 };
+
+#endif

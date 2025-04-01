@@ -6,14 +6,14 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:11:30 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/01 00:51:54 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:18:07 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "./Includes/PhoneBook.hpp"
 
 //Constructor for PhoneBook class
-PhoneBook::PhoneBook() : _index(0) {
+PhoneBook::PhoneBook() : _index(0){
 }
 
 //Destructor for PhoneBook class

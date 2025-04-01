@@ -1,28 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 18:11:42 by vafernan          #+#    #+#             */
-/*   Updated: 2025/03/31 18:46:07 by vafernan         ###   ########.fr       */
+/*   Created: 2025/04/01 19:53:42 by vafernan          #+#    #+#             */
+/*   Updated: 2025/04/01 19:53:43 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include "Contact.hpp"
-
-class PhoneBook
-{
-	private:
-		Contact _contacts[8];
-		int		_index;
-	public:
-		PhoneBook();
-		~PhoneBook();
-		void add_contact();
-		void search_contact();
-};

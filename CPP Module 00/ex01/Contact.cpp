@@ -6,11 +6,11 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:12:04 by vafernan          #+#    #+#             */
-/*   Updated: 2025/03/31 18:54:42 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:17:15 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "./Includes/Contact.hpp"
 
 //Constructor for Contact class
 Contact::Contact() {

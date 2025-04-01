@@ -5,25 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/31 17:33:12 by vafernan          #+#    #+#              #
-#    Updated: 2025/03/31 17:56:36 by vafernan         ###   ########.fr        #
+#    Created: 2025/04/01 17:43:58 by vafernan          #+#    #+#              #
+#    Updated: 2025/04/01 18:30:46 by vafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Contact.cpp main.cpp PhoneBook.cpp
+LIB = ./Includes
 
-NAME = PhoneBook
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+
+NAME = BraiiiiiiinnnzzzZ
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+
+OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
-clean:
+
+clean: 
+	rm -rf $(OBJS)
+		
+fclean: clean
 	rm -rf $(NAME)
 
-fclean: clean
-
 re: fclean all
+
+.PHONY: all clean fclean re
