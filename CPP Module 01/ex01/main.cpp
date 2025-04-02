@@ -6,7 +6,7 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 18:36:59 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/01 19:23:28 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/02 18:49:47 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	Zombie	*heap_zombie;				//Ptr to the dinamically allocated zombie horde
 	int		n;							//Number of zombies
 
-	n = 5;
+	n = 2;
 	heap_zombie = zombieHorde(n, "Foo");//Create a zombie horde with 5 zombies named "Foo"
 
 	std::cout << "The zombie horde is gorwing: " << std::endl;

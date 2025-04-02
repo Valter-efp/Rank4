@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/01 19:53:40 by vafernan          #+#    #+#              #
-#    Updated: 2025/04/02 18:50:14 by vafernan         ###   ########.fr        #
+#    Created: 2025/04/02 17:12:27 by vafernan          #+#    #+#              #
+#    Updated: 2025/04/02 18:50:22 by vafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp
 
-NAME = UnnecessaryViolence
+NAME = SedIs4Losers
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
