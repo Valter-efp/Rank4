@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Includes.hpp                                       :+:      :+:    :+:   */
+/*   includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 17:14:09 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 17:14:18 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:40:10 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INCLUDE_HPP
-# define INCLUDE_HPP
+#pragma once
 
 # include <iostream>
 # include <fstream>
 # include <string.h>
-
-#endif

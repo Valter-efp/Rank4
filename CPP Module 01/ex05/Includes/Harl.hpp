@@ -6,12 +6,11 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:39:59 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 18:40:20 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 18:54:56 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#pragma once
 
 #include <iostream>
 
@@ -26,5 +25,3 @@ class Harl
 		void	warning( void );
 		void	error( void );
 };
-
-#endif

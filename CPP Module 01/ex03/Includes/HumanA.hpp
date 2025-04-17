@@ -6,25 +6,25 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 19:48:50 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 16:07:58 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:38:24 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#pragma once
 
 #include "./Violence.hpp"
 
+// This class requires a "weapon" from the moment it is created.
 class HumanA
 {
-	public:
-		HumanA( std::string name, Weapon &weapon ):	_weapon(weapon), _name(name) { };
-		void	attack( void );
-
 	private:
-		Weapon		&_weapon;
 		std::string	_name;
-	
+		Weapon		&_weapon; // A reference to a Weapon (must be assigned during construction)
+		
+	public:
+		//Constructor
+		HumanA( std::string name, Weapon &weapon ):	_name(name), _weapon(weapon) { };
+		
+		//Method to atack
+		void	attack( void );
 };
-
-#endif

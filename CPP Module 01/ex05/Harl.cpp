@@ -6,35 +6,11 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:58:38 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 19:05:02 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:30:58 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Includes/Harl.hpp"
-
-static int	find_level(std::string level)
-{
-	std::string	arr[4] = { "debug", "info", "warning", "error" };
-
-	for(int i = 0; i < 4; i++)
-	{
-		if (!arr[i].compare(level))
-			return (i);
-	}
-	return (-1);
-}
-
-void	Harl::complain( std::string level )
-{
-	void	(Harl::*fn[])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
-	int		index;
-
-	index = find_level(level);
-	if (index != -1)
-		(this->*fn[index])();
-	else
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-}
 
 void	Harl::debug( void )
 {
@@ -57,4 +33,33 @@ void	Harl::error( void )
 {
 	std::string message = "This is unacceptable! I want to speak to the manager now.";
 	std::cout << "[ERROR]" << std::endl << message << std::endl;
+}
+
+// Method to find the complaint level using the index to an array of chars.
+static int	find_level(std::string level)
+{
+	std::string	arr[4] = { "debug", "info", "warning", "error" };
+
+	for(int i = 0; i < 4; i++)
+	{
+		if (!arr[i].compare(level))
+			return (i);
+	}
+	return (-1);
+}
+
+// Method to determine method to be called from the array of ptrs to the other functions of the Harls class.
+// The functions return void, are ptrs to member functions of Harl, declared in a array, and take no arguments.
+// "this" is a pointer to the current method, so it calls a function based on the already declared array.
+void	Harl::complain( std::string level )
+{
+	void	(Harl::*fn[])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
+	int		index;
+
+	index = find_level(level);
+	if (index != -1)
+		(this->*fn[index])();
+	else
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	//std::cout << "Printing this " << this << std::endl; //Just for learning what this is lol
 }

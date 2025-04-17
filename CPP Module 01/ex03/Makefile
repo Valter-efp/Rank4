@@ -6,13 +6,13 @@
 #    By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/01 19:53:40 by vafernan          #+#    #+#              #
-#    Updated: 2025/04/02 18:50:14 by vafernan         ###   ########.fr        #
+#    Updated: 2025/04/17 16:22:01 by vafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
-NAME = UnnecessaryViolence
+NAME = ex03
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g

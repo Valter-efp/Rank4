@@ -6,7 +6,7 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 18:39:31 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 18:51:57 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:05:44 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	harl.complain(level);
     std::cout << std::endl;
 
-	level = "";
+	level = "invalid";
 	std::cout << "Invalid level: ";
 	harl.complain(level);
     std::cout << std::endl;

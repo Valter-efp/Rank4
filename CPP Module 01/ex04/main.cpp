@@ -6,11 +6,11 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 17:12:16 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/02 18:28:37 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 18:18:52 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//./program_name file.txt string_to_find string_to_replace
+//./ex04 file.txt string_to_find string_to_replace
 
 #include "./Includes/includes.hpp"
 
@@ -18,7 +18,7 @@ static bool	make_file(std::string file, char **argv)
 {
 	std::ofstream	file_cpy;		///Output file
 	size_t			i;
-	size_t			word_pos;		///Psotion of the word to be replaced
+	size_t			word_pos;		///Position of the word to be replaced
 	std::string		new_file_name;
 	const char		*new_name;
 
@@ -72,8 +72,10 @@ int	main(int argc, char **argv)
 		std::cout << "Only 4 arguments!" << std::endl;
 		return (1);
 	}
+
 	argv++; ///Move to the next argument, the file name
 	file.open(*argv, std::ios::ate); ///Open the file to read
+
 	if (!file.is_open()) ///Check if the file can be opened
 	{
 		std::cout << "Error opening file: " << *argv << std::endl;
@@ -89,17 +91,18 @@ int	main(int argc, char **argv)
 	
 	file.seekg(0, std::ios::end);		///Move the end and determine file size
 	size = (unsigned int) file.tellg();	///Get the file size
-	if ((unsigned int) size > 0)
+	if (size > 0)
 	{
 		///Allocate memory for the file content
-		memblock = new (std::nothrow) char[(unsigned int) size + 1];
+		// "nothrow" returns NULL if mem alloc fails.
+		memblock = new (std::nothrow) char [size + 1];
 		if (memblock == NULL) ///Check if the memory allocation failed
 		{
 			file.close();
 			return (1);
 		}
 		file.seekg(0, std::ios::beg); ///Move to the beginning of the file
-		file.getline(memblock, (unsigned int) size + 1, 0); ///Read the file content		
+		file.getline(memblock, size + 1, 0); ///Read the file content		
 		file.close(); ///Close the file
 
 		///Create the new file
@@ -111,6 +114,7 @@ int	main(int argc, char **argv)
 		}
 		delete[] memblock; ///Free the memory
 	}
+
 	else ///If the file is empty
 	{
 		file.close();
@@ -120,5 +124,6 @@ int	main(int argc, char **argv)
 			return (1);
 		}
 	}
+
 	return (0);
 }

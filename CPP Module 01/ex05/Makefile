@@ -6,12 +6,14 @@
 #    By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/02 18:39:37 by vafernan          #+#    #+#              #
-#    Updated: 2025/04/02 18:44:50 by vafernan         ###   ########.fr        #
+#    Updated: 2025/04/17 18:54:38 by vafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp Harl.cpp
-NAME = Harl2.0
+
+NAME = ex05
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 

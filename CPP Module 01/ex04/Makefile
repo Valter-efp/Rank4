@@ -6,13 +6,13 @@
 #    By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/02 17:12:27 by vafernan          #+#    #+#              #
-#    Updated: 2025/04/02 18:50:22 by vafernan         ###   ########.fr        #
+#    Updated: 2025/04/17 17:58:08 by vafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp
 
-NAME = SedIs4Losers
+NAME = ex04
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
