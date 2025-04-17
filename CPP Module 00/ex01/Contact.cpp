@@ -6,18 +6,22 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:12:04 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/01 18:17:15 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 13:23:29 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Includes/Contact.hpp"
 
-//Constructor for Contact class
-Contact::Contact() {
+// Constructors
+Contact::Contact()
+{
+	// std::cout << "[Contact Default Constructor called]" << std::endl;
 }
 
-//Destructor for Contact class
-Contact::~Contact() {
+// Deconstructors
+Contact::~Contact()
+{
+	// std::cout << "[Contact Deconstructor called]" << std::endl;
 }
 
 //Method to set the contact information

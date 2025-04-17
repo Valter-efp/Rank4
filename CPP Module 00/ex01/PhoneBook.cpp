@@ -6,18 +6,22 @@
 /*   By: vafernan <vafernan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:11:30 by vafernan          #+#    #+#             */
-/*   Updated: 2025/04/01 18:18:07 by vafernan         ###   ########.fr       */
+/*   Updated: 2025/04/17 13:28:52 by vafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Includes/PhoneBook.hpp"
 
-//Constructor for PhoneBook class
-PhoneBook::PhoneBook() : _index(0){
+// Constructors
+PhoneBook::PhoneBook() : _index(0)
+{
+	// std::cout << "[Phonebook Default Constructor called]" << std::endl;
 }
 
-//Destructor for PhoneBook class
-PhoneBook::~PhoneBook() {
+// Deconstructors
+PhoneBook::~PhoneBook()
+{
+	// std::cout << "[Phonebook Default Constructor called]" << std::endl;
 }
 
 //Method to truncate a string to 10 characters
@@ -68,11 +72,13 @@ void PhoneBook::search_contact()
 			std::cout << std::setw(10) << i << "|" 
 					  << std::setw(10) << truncate(_contacts[i].getfirst_name()) << "|" 
 					  << std::setw(10) << truncate(_contacts[i].getlast_name()) << "|" 
-					  << std::setw(10) << truncate(_contacts[i].getnickname()) << "|" << std::endl;
+					  << std::setw(10) << truncate(_contacts[i].getnickname()) << "|"
+					  << std::endl;
 		}
 	}
+	
 	std::string index;
-	std::cout << "Wich contact to be displayed?";
+	std::cout << "Wich contact to be displayed? ";
 	std::getline(std::cin, index);
 	if (index.length() == 1 && index[0] >= '0' && index[0] <= '7')
 	{
@@ -80,8 +86,8 @@ void PhoneBook::search_contact()
 		if (i < _index)
 		{
 			std::cout << "First name: " << _contacts[i].getfirst_name() << std::endl;
-			std::cout << "Last name: " << _contacts[i].getlast_name() << std::endl;
-			std::cout << "Nickname: " << _contacts[i].getnickname() << std::endl;
+			std::cout << "Last name: "	<< _contacts[i].getlast_name()	<< std::endl;
+			std::cout << "Nickname: "	<< _contacts[i].getnickname()	<< std::endl;
 		}
 		else
 			std::cout << "Error non existing contact!" << std::endl;
